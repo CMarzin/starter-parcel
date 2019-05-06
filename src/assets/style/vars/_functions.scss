@@ -1,0 +1,35 @@
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+@function typography($key) {
+  @return map-get($typography, $key);
+}
+
+@function width($key) {
+  @return map-get($widths, $key);
+}
+
+@function height($key) {
+  @return map-get($heights, $key);
+}
+
+@function breakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
+
+@function spacing($key) {
+  @return map-get($spacings, $key);
+}
+
+@function line-height($key) {
+  @return map-get($line-heights, $key);
+}
+
+@function font-size($key) {
+  @return map-get($font-sizes, $key);
+}
+
+@function font-weight($key) {
+  @return map-get($font-weight, $key);
+}

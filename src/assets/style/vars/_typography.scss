@@ -1,0 +1,27 @@
+///
+/// Application-wide font-size map
+///
+/// @type Map
+///
+/// @prop {String} key - Font size identifier
+/// @prop {Map} value - font-size value
+///
+$font-sizes: (
+  'small': 1.2rem,
+  'regular': 1.4rem,
+  'regular-medium': 1.6rem,
+  'medium': 1.8rem,
+  'medium-large': 2rem,
+  'large': 2.2rem
+);
+
+$font-weight: (
+  'regular': 400,
+  'medium': 500,
+  'bold': 700,
+  'black': 900
+);
+
+$line-heights: (
+  'button': 1rem,
+);

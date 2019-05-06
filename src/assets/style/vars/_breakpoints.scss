@@ -1,0 +1,15 @@
+///
+/// Application-wide breakpoints map
+///
+/// @type Map
+///
+/// @prop {String} key - Name of the breakpoint
+/// @prop {Map} value - Breakpoint value expressed in pixels
+///
+$breakpoints: (
+  'mobile': 426px,
+  'tablet': 768px,
+  'desktop': 1180px,
+  'large': 900px,
+  'wide': 1400px
+) !default;

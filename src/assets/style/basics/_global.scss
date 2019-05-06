@@ -1,0 +1,9 @@
+html {
+  font-size: 10px;
+  @include font-smoothing(on);
+}
+
+img {
+  height: auto;
+  width: 100%;
+}

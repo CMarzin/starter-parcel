@@ -1,0 +1,48 @@
+///
+/// Application-wide widths map
+///
+/// @type Map
+///
+/// @prop {String} key - Type of the width
+/// @prop {Map} value - Width value
+///
+$widths: (
+  'container': 1280px,
+) !default;
+
+
+///
+/// Application-wide heights map
+///
+/// @type Map
+///
+/// @prop {String} key - Type of the height
+/// @prop {Map} value - Height value
+///
+$heights: (
+  'container': 960px,
+) !default;
+
+///
+/// Application-wide spacing map
+///
+/// @type Map
+///
+/// @prop {String} key - Identifier of the spacing
+/// @prop {Map} value - Spacing value
+///
+$spacings: (
+  'xsmall': 5px,
+  'small': 10px,
+  'smallx': 15px,
+  'medium': 20px,
+  'xmedium': 20px,
+  'xxmedium': 25px,
+  'mediumx': 30px,
+  'mediumxx': 35px,
+  'large': 40px,
+  'largex': 50px,
+  'xlarge': 60px,
+  'xxlarge': 80px,
+  'xxxlarge': 100px
+) !default;

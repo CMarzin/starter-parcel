@@ -1,0 +1,103 @@
+@mixin title($color) {
+  font-family: $galaxie-bold;
+  font-size: font-size('title');
+  font-weight: font-weight('bold');
+  color: $color;
+}
+
+@mixin subtitle($color) {
+  // font-family: $museo;
+  font-size: font-size('subtitle');
+  font-weight: font-weight('title');
+  color: $color;
+}
+
+@mixin regular_text($color) {
+  font-family: $azo-regular;
+  font-size: font-size('regular');
+  font-weight: font-weight('regular');
+  color: $color;
+}
+
+@mixin regular_book($color) {
+  font-family: $galaxie-book;
+  font-size: font-size('regular');
+  font-weight: font-weight('regular');
+  color: $color;
+}
+
+@mixin strong_text($color) {
+  // font-family: $museo;
+  font-size: font-size('regular');
+  font-weight: font-weight('bold');
+  color: $color;
+}
+
+/// Custom text
+@mixin custom_text($font-family, $color, $font-size, $font-weight: 400) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+// Media query mixin //
+@mixin phone {
+  @media (max-width: #{breakpoint('mobile') - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: #{breakpoint('tablet')}) and (max-width: #{breakpoint('desktop') - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{breakpoint('tablet')}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{breakpoint('desktop')}) {
+    @content;
+  }
+}
+
+/// Flex mixin
+///
+/// @param  {String} $jc [center] - justify-content
+/// @param {String} $ai [center] - align-items
+/// @param {String} $flow [row] - flex-flow
+///
+/// @example flex(flex-start, center, column)
+///
+@mixin flex($jc: center, $ai: center, $flow: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-flow: $flow;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-flow: column;
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+      -webkit-font-smoothing: subpixel-antialiased;
+      -moz-osx-font-smoothing: auto;
+  }
+}
