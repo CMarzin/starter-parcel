@@ -31,7 +31,7 @@ const patho = [
 ]
 
 
-const submitted = patho
+const submitted = submittedArrayIHC
 
 const getAnswer = async () => {
 
@@ -47,6 +47,30 @@ const getAnswer = async () => {
       }
     })
 
+
+    let  result = null
+    for (let i = 0; i < answer.data.length; i++) {
+      let ans = answer.data
+
+      for (let y = 0; y < ans[i].conditions_group.length; y++) {
+
+        let condition = ans[i].conditions_group[y]
+
+        let diff = _.intersection(submitted, condition.fields)
+        // console.log('diff', diff)
+
+        if (diff.length === condition.fields.length) {
+
+          if (_.isEqual(diff, submitted)) {
+            result = ans[i]
+          }
+        }
+      }
+    }
+
+
+    console.log('result', result)
+
     const groups = answer.data.map(ans => {
 
       ans.conditions_group.map(condition => {
@@ -55,10 +79,13 @@ const getAnswer = async () => {
         if (diff.length === condition.fields.length) {
           if (_.isEqual(diff, submitted)) {
             console.log('ans', ans)
+            return ans
           }
         }
       })
     })
+
+    // console.log('groups', groups)
 
 
   } catch (error) {
