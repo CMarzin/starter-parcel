@@ -1,4 +1,6 @@
 import '../style/main'
 import Test from './test'
 
-console.log(Test.coucou('corentin'))
+// console.log(Test.coucou('corentin'))
+
+
