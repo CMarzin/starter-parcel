@@ -56,14 +56,10 @@ const getAnswer = async () => {
 
         let condition = ans[i].conditions_group[y]
 
-        let diff = _.intersection(submitted, condition.fields)
-        // console.log('diff', diff)
+        let diff = _.intersectionWith(submitted, condition.fields, _.isEqual)
 
         if (diff.length === condition.fields.length) {
-
-          if (_.isEqual(diff, submitted)) {
-            result = ans[i]
-          }
+          result = ans[i]
         }
       }
     }
