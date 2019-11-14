@@ -6,14 +6,14 @@
   "license": "MIT",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
     "parcel-bundler": "^1.12.3",
-    "sass": "^1.20.1"
+    "sass": "^1.23.3"
   }
 }
